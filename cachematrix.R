@@ -1,7 +1,16 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions can be used to easily manage caching of 
+## big matrices that have to be inverted. The way to use them is:
+##  0) Have a matrix in the variable 'x' 
+##  1) Use the makeCacheMatrix and save that value: m <- makeCacheMatrix(x)
+##  2) Whenever the inverted matrix is needed, use the cacheSolve function:
+##     cacheSolve(m)
 
-## Write a short comment describing this function
+## This is part of the Assignment 2 of the Coursera course "R Programming"
+## by "Johns Hopkins University".
+
+## The submitter of this assignment is Francisco QV. February 2016.
+
+## This function creates a special "matrix" object that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL  # inverse matrix
